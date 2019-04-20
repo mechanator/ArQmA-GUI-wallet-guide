@@ -56,6 +56,8 @@
     -   [Bootstrap nodes](#bootstrap-nodes)
 -   [Common issues and solutions](#common-issues-and-solutions)
 
+![ArQmA_logo](media/monero-logo-1280.png
+)
 Preface
 =======
 
