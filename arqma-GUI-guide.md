@@ -59,7 +59,7 @@
 Preface
 =======
 
-This guide is open source and maintained by ErCiccione, of the Monero
+This guide is open source and maintained by argonator, of the ArQmA
 community. If you have suggestions or wish to contribute to the
 development of this guide, feel free to open Pull Requests or Issues on
 the GitHub repository where this document is maintained:
