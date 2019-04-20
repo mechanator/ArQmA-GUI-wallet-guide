@@ -1,5 +1,5 @@
 export BUILD = build
-export BOOKNAME = monero-gui-wallet-guide
+export BOOKNAME = arqma-gui-wallet-guide
 export TITLE = title.txt
 export METADATA = metadata.xml
 export TOC = --toc --toc-depth=3
