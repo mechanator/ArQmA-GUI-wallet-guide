@@ -84,7 +84,9 @@ If you need **help/support**, open an issue on this repository or contact ArqTra
   
 + On chat Telegram or Discord. Links on the main arqma.com site.
 Discord: https://discord.gg/TqXZWGm
+
 Telegram: https://t.me/joinchat/HNpOMRIiNSoCn0zYrAOofw
+
 + On **reddit**: just PM /r/arqma/ArqTras
 
 ### As submissions and editing occurs, the final version will be reviewed and edited accordingly by the community.
