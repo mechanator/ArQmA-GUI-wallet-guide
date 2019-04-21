@@ -1,4 +1,5 @@
-## Guide for the ArQmA GUI wallet
+![ArQmA_logo](media/monero-logo-1280.png)
+## A guide for the ArQmA GUI wallet
 
 This repository contains the guide for the [ArQmA GUI Wallet](https://github.com/arqma/arqma.github.io -TBD).
 This document is meant to be updated continuously and **a new major release will be available whenever ArQmA publishes a new version of the GUI**.
