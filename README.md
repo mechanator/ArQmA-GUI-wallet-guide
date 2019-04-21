@@ -27,18 +27,18 @@ The original guide can be found in the [en](https://github.com/arqma/arqma.githu
 
 **Chapter**|**Content**
 ---|--- 
-00 | [Preface](https://github.com/monero-ecosystem/monero-GUI-guide/blob/master/en/ch00.md)
-01 | [Welcome](https://github.com/monero-ecosystem/monero-GUI-guide/blob/master/en/ch01.md)
-02 | [Create a Wallet](https://github.com/monero-ecosystem/monero-GUI-guide/blob/master/en/ch02.md)
-03 | [Monero Account](https://github.com/monero-ecosystem/monero-GUI-guide/blob/master/en/ch03.md)
-04 | [Send Monero](https://github.com/monero-ecosystem/monero-GUI-guide/blob/master/en/ch04.md)
-05 | [Receive Monero](https://github.com/monero-ecosystem/monero-GUI-guide/blob/master/en/ch05.md)
-06 | [Transaction History](https://github.com/monero-ecosystem/monero-GUI-guide/blob/master/en/ch06.md)
-07 | [Advanced Features](https://github.com/monero-ecosystem/monero-GUI-guide/blob/master/en/ch07.md)
-08 | [Settings](https://github.com/monero-ecosystem/monero-GUI-guide/blob/master/en/ch08.md)
-09 | [Binaries Verification](https://github.com/monero-ecosystem/monero-GUI-guide/blob/master/en/ch09.md)
-10 | [About Remote Nodes](https://github.com/monero-ecosystem/monero-GUI-guide/blob/master/en/ch10.md)
-11 | [Common Issues and Solutions](https://github.com/monero-ecosystem/monero-GUI-guide/blob/master/en/ch11.md)
+00 | [Preface](https://github.com/arqma/arqma.github.io/ArQmA-GUI-guide/blob/master/en/ch00.md)
+01 | [Welcome](https://github.com/arqma/arqma.github.io/ArQmA-GUI-guide/blob/master/en/ch01.md)
+02 | [Create a Wallet](https://github.com/arqma/arqma.github.io/ArQmA-GUI-guide/blob/master/en/ch02.md)
+03 | [ArQmA Account](https://github.com/arqma/arqma.github.io/ArQmA-GUI-guide/blob/master/en/ch03.md)
+04 | [Send ArQmA](https://github.com/arqma/arqma.github.io/ArQmA-GUI-guide/blob/master/en/ch04.md)
+05 | [Receive ArQmA](https://github.com/arqma/arqma.github.io/ArQmA-GUI-guide/blob/master/en/ch05.md)
+06 | [Transaction History](https://github.com/arqma/arqma.github.io/ArQmA-GUI-guide/blob/master/en/ch06.md)
+07 | [Advanced Features](https://github.com/arqma/arqma.github.io/ArQmA-GUI-guide/blob/master/en/ch07.md)
+08 | [Settings](https://github.com/arqma/arqma.github.io/ArQmA-GUI-guide/blob/master/en/ch08.md)
+09 | [Binaries Verification](https://github.com/arqma/arqma.github.io/ArQmA-GUI-guide/blob/master/en/ch09.md)
+10 | [About Remote Nodes](https://github.com/arqma/arqma.github.io/ArQmA-GUI-guide/blob/master/en/ch10.md)
+11 | [Common Issues and Solutions](https://github.com/arqma/arqma.github.io/ArQmA-GUI-guide/blob/master/en/ch11.md)
 
 These single chapters can be built in a single file in 3 different formats: **HTML**, **PDF** and **EPUB**.  
 To do so we use pandoc. If you wish to **build the guide by yourself**, you can do it following these steps (on Linux):
@@ -65,8 +65,8 @@ If you wish to contribute, please **do not** edit the file *ArQmA-GUI-guide.md*.
 Before adding a translation, please keep in mind the general guidelines for ArQmA translators, which are:
 
 - **Avoid** the use of **gender specific** terminology.
-- If available, use the **glossary** for your language. This will help to keep translations consistent across different works. You can find all glossaries [here](https://github.com/monero-ecosystem/monero-translations/tree/master/terminology-guides).
-- Read the guide '[Translation tips for ArQmA translators](https://github.com/monero-ecosystem/monero-translations/blob/master/translation-tips.md)'. **It contains all the information you need** to submit a perfect translation.
+- If available, use the **glossary** for your language. This will help to keep translations consistent across different works. You can find all glossaries [here](https://github.com/mechanator/ArQmA-GUI-wallet-guide/tree/master/terminology-guides).
+- Read the guide '[Translation tips for ArQmA translators](https://github.com/mechanator/ArQmA-GUI-wallet-guide/tree/master/arqma-translations/translation-tips.md)'. **It contains all the information you need** to submit a perfect translation.
 - If a string contains numbers, just keep them as they are.
 
 ### Steps
