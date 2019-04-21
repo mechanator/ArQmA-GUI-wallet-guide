@@ -16,14 +16,13 @@ The links above are for the **upstream version of the guide**. In other words, t
 If you are looking for the guide for a specific GUI release, change the branch of this repository.  
 Branches available:
 
-+ **[1.5](https://github.com/arqma/arqma.github.io/ArQmA-GUI-guide/tree/1.5)**: ArQmA GUI Devil's Cauldron 0.3.2.1
++ **(https://github.com/arqma/arqma.github.io/ArQmA-GUI-guide/tree/)**: ArQmA GUI Devil's Cauldron 0.3.2.1
 
-&nbsp;
 
 For **PDF** and **EPUB** versions, check out the [latest Release](https://github.com/arqma/arqma.github.io/ArQmA-GUI-guide/releases).
 
 ## Structure and guidelines for contributors
-The original guide can be found in the [en](https://github.com/arqma/arqma.github.io/ArQmA-GUI-guide/blob/master/en) folder. It's divided in 9 main chapters:
+The original guide can be found in the [en](https://github.com/arqma/arqma.github.io/ArQmA-GUI-guide/blob/master/en) folder. It's divided in 11 main chapters:
 
 **Chapter**|**Content**
 ---|--- 
