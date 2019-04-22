@@ -59,7 +59,7 @@ If you want to build all formats for all available languages: `make all` - This 
 
 ### Contribute!
 Improvements are always welcome. Feel free to propose a change using the issue tracker or opening a pull request.  
-If you wish to contribute, please **do not** edit the file *ArQmA-GUI-guide.md*. That's just temporary and it gets built manually. Work ONLY on the *.md* files inside the 'en' folder. Every pull request with changes to *monero-GUI-guide.md* will be rejected.
+If you wish to contribute, please **do not** edit the file *ArQmA-GUI-guide.md*. That's just temporary and it gets built manually. Work ONLY on the *.md* files inside the 'en' folder. Every pull request with changes to *ArQmA-GUI-guide.md* will be rejected.
 
 ## Translations
 Before adding a translation, please keep in mind the general guidelines for ArQmA translators, which are:
