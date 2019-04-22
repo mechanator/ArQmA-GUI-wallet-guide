@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#translations">Translations</a></li>
+<li><a href="#windows-preparation">Windows Preparation</a></li>
+<li><a href="#shortcuts">Shortcuts</a></li>
+<li><a href="#welcome">Welcome</a><ul>
+<li><a href="#choose-a-language">Choose a Language</a></li>
+<li><a href="#choose-wallet-mode">Choose wallet mode</a></li>
+<li><a href="#about-the-simplebootstrap-mode">About the Simple/Bootstrap mode</a></li>
+</ul></li>
+<li><a href="#create-a-wallet">Create a Wallet</a><ul>
+<li><a href="#create-new-wallet">Create new wallet</a><ul>
+<li><a href="#daemon-settings-advanced-mode">Daemon settings (Advanced mode)</a></li>
+<li><a href="#run-a-full-node">Run a full node</a></li>
+</ul></li>
+<li><a href="#create-new-wallet-from-hardware">Create new wallet from hardware</a><ul>
+<li><a href="#create-the-wallet">Create the wallet</a></li>
+<li><a href="#add-a-password">Add a password</a></li>
+<li><a href="#daemon-settings-advanced-mode-1">Daemon settings (Advanced mode)</a></li>
+<li><a href="#run-a-full-node-1">Run a full node</a></li>
+</ul></li>
+<li><a href="#restore-wallet-from-keys-or-mnemonic-seed">Restore wallet from keys or mnemonic seed</a><ul>
+<li><a href="#restoring-from-seed">Restoring from seed</a></li>
+<li><a href="#restoring-from-keys">Restoring from keys</a></li>
+</ul></li>
+<li><a href="#open-a-wallet-from-file">Open a wallet from file</a></li>
+</ul></li>
+<li><a href="#arqma-account">ArQmA Account</a></li>
+<li><a href="#send-arqma">Send ArQmA</a><ul>
+<li><a href="#address-book">Address Book</a></li>
+</ul></li>
+<li><a href="#receive-arqma">Receive ArQmA</a><ul>
+<li><a href="#merchant-view">Merchant view</a></li>
+</ul></li>
+<li><a href="#transaction-history">Transaction History</a></li>
+<li><a href="#advanced-features">Advanced Features</a><ul>
+<li><a href="#solo-mining">Solo mining</a></li>
+<li><a href="#prove---check">Prove - Check</a><ul>
+<li><a href="#prove-transaction">Prove Transaction</a></li>
+<li><a href="#check-transaction">Check Transaction</a></li>
+</ul></li>
+<li><a href="#shared-ringdb">Shared RingDB</a></li>
+<li><a href="#sign---verify-message">Sign - verify Message</a><ul>
+<li><a href="#sign">Sign</a></li>
+<li><a href="#verify">Verify</a></li>
+</ul></li>
+<li><a href="#sign---verify-file">Sign - verify File</a><ul>
+<li><a href="#sign-1">Sign</a></li>
+<li><a href="#verify-1">Verify</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#settings">Settings</a><ul>
+<li><a href="#wallet">Wallet</a></li>
+<li><a href="#layout">Layout</a></li>
+<li><a href="#local-node">Local Node</a></li>
+<li><a href="#remote-node">Remote Node</a></li>
+<li><a href="#log">Log</a></li>
+<li><a href="#info">Info</a></li>
+<li><a href="#seed-and-keys">Seed and keys</a></li>
+</ul></li>
+<li><a href="#binaries-verification">Binaries Verification</a></li>
+<li><a href="#about-remote-nodes">About remote nodes</a><ul>
+<li><a href="#bootstrap-nodes">Bootstrap nodes</a></li>
+</ul></li>
+<li><a href="#common-issues-and-solutions">Common issues and solutions</a></li>
+</ul>
+</nav>
+<p><img src="media/monero-logo-1280.png" alt="ArQmA_logo" /> # Preface This guide is open source and maintained by Argonator, of the ArQmA community. If you have suggestions or wish to contribute to the development of this guide, feel free to open Pull Requests or Issues on the GitHub repository where this document is maintained: <a href="https://github.com/mechanator/ArQmA-GUI-wallet-guide">github.com/mechanator/ArQmA-GUI-wallet-guide</a>.  </p>
+<p>For the online version of this guide, click <a href="https://github.com/mechanator/ArQmA-GUI-wallet-guide/blob.master/arqma-GUI-guide.md">here</a></p>
+<h2 id="translations">Translations</h2>
+<p>This document will be localized into several languages. You can find all available translations in the <a href="https://github.com/mechanator/ArQmA-GUI-wallet-guide/tree/master/translations">dedicated section on GitHub</a>.</p>
+<h2 id="windows-preparation">Windows Preparation</h2>
+<p>If you are on Windows:</p>
+<ul>
+<li>Make sure that your antivirus does not block the program. Antivirus program arbitrarily flag most blockchain applications as virii. Add and exeception to your installed antiirus program before proceeding.</li>
+</ul>
+<p>A miner is included in the ArQmA GUI software and, as a result, most anti virus software flags the ArQmA GUI files as malware and subsequently quarantines them. Fortunately, however, there's a fairly trivial work around you can use. That is:</p>
+<ul>
+<li>Create a new directory / folder.</li>
+<li>Open your AV software.</li>
+<li>Add an exception for the newly created directory / folder. Put differently, you have to whitelist the newly created directory / folder.</li>
+<li>Extract the .zip file (in case of Windows) or the .tar.bz2 file (in case of Linux or Mac OS X) to the whitelisted directory / folder.</li>
+</ul>
+<p><em>Note:</em> if you're using Windows and did not install custom anti virus software, Windows Defender is, most likely, acting as active anti virus software.</p>
+<ul>
+<li>The first time you start the wallet you must give permission to connect to the network via a pop-up. Check the appropriate boxes and click <code>Allow access</code>.</li>
+</ul>
+<p><img src="media/win-firewall-check.png" alt="win firewall check" /></p>
+<h2 id="shortcuts">Shortcuts</h2>
+<p>Some shortcuts are available to make the user experience with the GUI easier:  </p>
+<p><strong>On all operating systems:</strong><br />
+Press <code>Ctrl</code> to view each page shortcut. Press <code>ctrl+&quot;shortcut&quot;</code> to go to that page  </p>
+<p><strong>On Linux/Windows:</strong><br />
+<code>ctrl + tab</code> -&gt; go to the next page<br />
+<code>ctrl + shift + tab</code> -&gt; go to the previous page  </p>
+<p><strong>On macOS:</strong><br />
+<code>cmd + tab</code> -&gt; go to the next page<br />
+<code>cmd + shift + tab</code> -&gt; go to the previous page</p>
+<h1 id="welcome">Welcome</h1>
+<p><img src="media/wizard_0-welcome.png" alt="Welcome" /></p>
+<p>Extract the package and click on <code>ArQmA-wallet-gui</code>.</p>
+<p>Welcome to ArQmA GUI Wallet.</p>
+<ol type="1">
+<li><strong>Language:</strong> Click here to see a list of available languages.<br />
+</li>
+<li><strong>Continue:</strong> If you are satisfied with the current language, continue to the next screen.</li>
+</ol>
+<h2 id="choose-a-language">Choose a Language</h2>
+<p><img src="media/wizard_1-lang.png" alt="Language" /></p>
+<p>You'll see a list of available languages, click on the one of your choice to change it and continue from the welcome screen. <em>Note:</em> You will be able to change the language later by clicking on the <em>flag</em> in the upper-left corner.</p>
+<ol type="1">
+<li><strong>Close:</strong> Cancel and return to the previous screen.</li>
+</ol>
+<h2 id="choose-wallet-mode">Choose wallet mode</h2>
+<p><img src="media/wizard_1_1-mode.png" alt="mode" /></p>
+<p>This page lets you choose the mode that best suits your accessibility and privacy needs.<br />
+<em>Note:</em> Stagenet and Testnnet only supports <em>Advanced mode</em>.</p>
+<ol type="1">
+<li><strong>Simple mode:</strong> This mode will connect your wallet to a remote node. Please note that remote nodes may weaken your privacy. Choose this if you have low privacy requirement, need to quickly access the ArQmA network, and only intend to manage small amount of ArQmA.<br />
+</li>
+<li><strong>Simple mode (bootstrap):</strong> This mode is similar to the previous one, as it will connect you to a remote node, but will download the blockchain to your local drive in the background. As soon as you have a local copy of the entire blockchain, you will be connected to your local node. It allows you to start using ArQmA immediately and have a fallback option if your local blockchain needs to sync new blocks while offering the privacy benefits of a full node when fully synced.<br />
+</li>
+<li><strong>Advanced mode:</strong> Using this mode will let you run a full node, which downloads and maintains an entire copy of the blockchain. Your wallet will not be usable until your local copy of the blockchain is fully synchronized. Choose this mode if the maximum privacy matters to you.<br />
+</li>
+<li><strong>Change language:</strong> This will let you choose the language from the startup page (again).</li>
+</ol>
+<h2 id="about-the-simplebootstrap-mode">About the Simple/Bootstrap mode</h2>
+<p><img src="media/wizard_1_2-warning.png" alt="acknowledgement" /></p>
+<p>Upon choosing simple mode or bootstrap mode, an acknowledgement page will be shown, explaining the features, behavior, and privacy constraints of the mode.<br />
+Please carefully read those informations before accepting the implications of this mode and proceed to the next step.<br />
+You must understand the inherent risks of using a remote node for your privacy, and you should avoid using it with large amounts of money. If you connect to a <em>malicious</em> remote node, it could track your IP address, your &quot;restore height&quot; and associated block request data, and send you inaccurate information to learn more about transactions you make.</p>
+<ol type="1">
+<li><strong>Region:</strong> Choose a region to pick up the remote nodes from. The closer the node is, the better the wallet performance will be.<br />
+</li>
+<li><strong>Acknowledgement:</strong> Check This box if you have <strong>fully understood</strong> the privacy implications of a remote node and agree to <strong>weaken your privacy</strong> by using it.</li>
+</ol>
+<h1 id="create-a-wallet">Create a Wallet</h1>
+<p><img src="media/wizard_2-options.png" alt="welcome" /></p>
+<p>On this page you can choose how to connect to the wallet and to the network:</p>
+<ol type="1">
+<li><strong>Create a new wallet:</strong> Start the procedure to make a new wallet. Choose this option if this is your first time using ArQmA.<br />
+</li>
+<li><strong>Create new wallet from hardware:</strong> Create a new wallet from an hardware device (like Ledger or Trezor)<br />
+</li>
+<li><strong>Open a wallet from file:</strong> Choose this option to select a pre-existing wallet from your files with the extension <code>.keys</code>.<br />
+</li>
+<li><strong>Restore wallet from keys or mnemonic seed:</strong> Click here if you want to recover a pre-existing wallet using the mnemonic seed or the keys.<br />
+</li>
+<li><strong>Change wallet mode:</strong> Click here to switch between modes and choose the wallet mode that best fits your needs.<br />
+</li>
+<li><strong>Mainnet:</strong> <em>Advanced:</em> Select this from the dropdown list to use the main ArQmA network<br />
+</li>
+<li><strong>Testnet:</strong> <em>Advanced:</em> Select this from the dropdown list if you would like to use a development network instead of the main network. Testnet is designed to let developers test new features that are not available on Mainnet or Stagenet.<br />
+</li>
+<li><strong>Stagenet:</strong> <em>Advanced:</em> Select this from the dropdown list if you would like to use a network for staging instead of the main network. Stagenet mimics the features of Mainnet and is designed to let end users test ArQmA without the risk of losing funds.<br />
+</li>
+<li><strong>Number of KDF rounds:</strong> <em>Advanced:</em> Adjust the number of Key Derivation Function rounds in order to enhance the overall security of the generated keys. Any random large number will increase the security.</li>
+</ol>
+<h2 id="create-new-wallet">Create new wallet</h2>
+<p><img src="media/wizard_3-create.png" alt="new" /></p>
+<p>Here you can create a new wallet:</p>
+<ol type="1">
+<li><strong>Wallet name:</strong> Give a name for your wallet (in this example <code>testname</code> is used).<br />
+</li>
+<li><strong>Mnemonic seed: Write down your [mnemonic seed] and keep it safe. Your seed is the master key of your wallet, you can use it to recover your funds.</strong><br />
+</li>
+<li><strong>Wallet location:</strong> Select the destination folder of the wallet.<br />
+</li>
+<li>Remember, there is no recovery possible for lost seeds or lost private view/spendkeys. Safeguard it like it was cash. ### Add a password <img src="media/wizard_4-pass.png" alt="add password" /></li>
+</ol>
+<p>Add a strong password to protect your wallet. If you lose your password, then only your mnemonic seed can recover your wallet.</p>
+<h3 id="daemon-settings-advanced-mode">Daemon settings (Advanced mode)</h3>
+<p><img src="media/wizard_5-daemon-settings.png" alt="daemon settings" /></p>
+<p>Here you can choose if you are going to run a full node or use a remote one:</p>
+<ol type="1">
+<li><strong>Start node in background:</strong> Check this box to run a full node and begin blockchain sync.<br />
+</li>
+<li><strong>Blockchain location (optional):</strong> To store the blockchain somewhere other than default, enter that location here.<br />
+</li>
+<li><strong>Bootstrap node:</strong> To use a bootstrap node enter the host and port. A bootstrap node allows you to use your wallet while you are downloading the blockchain by connecting to a remote node. For a list of available remote nodes and info about them, check the <a href="#about-remote-nodes">About remote nodes</a> section of this guide.<br />
+</li>
+<li><strong>Connect to a remote node:</strong> Check this box if you want to use only a remote node without downloading the blockchain. You will need to put the host and port of the remote node after checking the box.</li>
+</ol>
+<h3 id="run-a-full-node">Run a full node</h3>
+<p>Upon completion of the setup you will be prompted to the settings menu, but first you will see a window like this pop up:</p>
+<p><img src="media/daemon-launch.png" alt="sync" /></p>
+<p>If you want to create a normal wallet using your personal full node, you don't need to do anything, let the countdown finish, then wait until your node is fully synced.<br />
+If you need some special settings, like setting up a view-only wallet or adding the blockchain manually, go to <a href="#settings">Settings</a>.</p>
+<h2 id="create-new-wallet-from-hardware">Create new wallet from hardware</h2>
+<h3 id="create-the-wallet">Create the wallet</h3>
+<p><img src="media/create_hardware_wallet.png" alt="2.4.1" /></p>
+<ol type="1">
+<li><strong>Wallet name:</strong> Give a name for your wallet (in this example <code>ledger-test</code> is used).<br />
+</li>
+<li><strong>Wallet location:</strong> Select the destination folder of the wallet.<br />
+</li>
+<li><strong>Create a new wallet from device:</strong> Select this option if this is the first time you use a hardware wallet.<br />
+</li>
+<li><strong>Restore a wallet from device:</strong> Choose this option if you already had a hardware wallet and want to restore it.<br />
+<strong>Creation Date or Restore height (optional):</strong> <em>Restore only:</em> If you know the date or block height that your wallet was created at, you can specify it here so the wallet doesn't have to scan the entire blockchain looking for your funds. For example, if your first transaction was included on <code>2017-07-08</code> in block <code>1350000</code>, you should put the previous day date (e.g. <code>2017-07-06</code>) or a slightly lower height (e.g. <code>1330000</code>) so the wallet will start scanning from there, saving you some time. More information about restore height on <a href="https://ArQmA.stackexchange.com/questions/7581/what-is-the-relevance-of-the-restore-height">StackExchange</a>.<br />
+</li>
+<li><strong>Subaddress lookahead (optional):</strong> pregenerate a number of accounts with a number of subaddresses each.<br />
+</li>
+<li><strong>Device name:</strong> Select the hardware wallet you want to use.<br />
+ </li>
+</ol>
+<p>Step by step guide on how to generate a Ledger wallet with the ArQmA GUI for all operating systems (StackExchange):<br />
+[How do I generate a Ledger ArQmA wallet with the GUI (ArQmA-wallet-gui)?] This is similar to the ArQmA one here:(https://monero.stackexchange.com/questions/9901/how-do-i-generate-a-ledger-monero-wallet-with-the-gui-monero-wallet-gui)</p>
+<h3 id="add-a-password">Add a password</h3>
+<p><img src="media/wizard_4-pass.png" alt="add password" /></p>
+<p>Add a strong password to protect your wallet. If you lose your password, then only your mnemonic seed can recover your wallet. Remember, if you also lose your 25 mnemonic seed, you cannot recover your wallet. There is no further recovery process if you lose both the keys and the mnemonic.</p>
+<h3 id="daemon-settings-advanced-mode-1">Daemon settings (Advanced mode)</h3>
+<p><img src="media/wizard_5-daemon-settings.png" alt="daemon settings" /></p>
+<p>Here you can choose if you are going to run a full node or use a remote one:</p>
+<ol type="1">
+<li><strong>Start node in background:</strong> Check this box to run a full node and begin blockchain sync.<br />
+</li>
+<li><strong>Blockchain location (optional):</strong> To store the blockchain somewhere other than default, enter that location here.<br />
+</li>
+<li><strong>Bootstrap node:</strong> To use a bootstrap node enter the host and port. A bootstrap node allows you to use your wallet while you are downloading the blockchain by connecting to a remote node. For a list of available remote nodes and info about them, check the <a href="#about-remote-nodes">About remote nodes</a> section of this guide.<br />
+</li>
+<li><strong>Connect to a remote node:</strong> Check this box if you want to use only a remote node without downloading the blockchain. You will need to put the host and port of the remote node after checking the box.</li>
+</ol>
+<h3 id="run-a-full-node-1">Run a full node</h3>
+<p>Upon completion of the setup you will be prompted to the settings menu, but first you will see a window like this pop up:</p>
+<p><img src="media/daemon-launch.png" alt="sync" /></p>
+<p>If you want to create a normal wallet using your personal full node, you don't need to do anything, let the countdown finish, then wait until your node is fully synced.<br />
+If you need some special settings, like setting up a view-only wallet or adding the blockchain manually, go to <a href="#settings">Settings</a>.</p>
+<h2 id="restore-wallet-from-keys-or-mnemonic-seed">Restore wallet from keys or mnemonic seed</h2>
+<h3 id="restoring-from-seed">Restoring from seed</h3>
+<p><img src="media/wizard_6-restore-seed.png" alt="restore from seed" /></p>
+<p>Restoring from your mnemonic seed is the easiest way to recover your wallet. You need to put the following information:</p>
+<ol type="1">
+<li><strong>Wallet name:</strong> Give a name for your wallet (in this example <code>testname</code> is used).<br />
+</li>
+<li><strong>Mnemonic seed:</strong> Paste your seed made of 25 (or 24) words.<br />
+</li>
+<li><strong>Creation Date or Restore height (optional):</strong> If you know the date or block height that your wallet was created at, you can specify it here so the wallet doesn't have to scan the entire blockchain looking for your funds. For example, if your first transaction was included on <code>2018-07-08</code> in block <code>1350000</code>, you should put the previous day date (e.g. <code>2018-07-06</code>) or a slightly lower height (e.g. <code>1330000</code>) so the wallet will start scanning from there, saving you some time. More information about restore height on <a href="https://monero.stackexchange.com/questions/7581/what-is-the-relevance-of-the-restore-height">StackExchange</a>.<br />
+</li>
+<li><strong>Wallet location:</strong> Select the destination folder of the wallet.</li>
+</ol>
+<p>A detailed guide is available on getArQmA.org: <a href="https://github.com/arqma/arqma.github.io">'How to restore your account'</a></p>
+<h3 id="restoring-from-keys">Restoring from keys</h3>
+<p><img src="media/wizard_7-restore-keys.png" alt="restore from key" /></p>
+<p>Restoring from keys is quite easy and can be extremely useful, especially if you are moving your wallet from an online service like MyArQmA. You need to put the following information:</p>
+<ol type="1">
+<li><strong>Wallet name:</strong> Give a name for your wallet (in this example <code>testname</code> is used).<br />
+</li>
+<li><strong>Account address:</strong> The address of the wallet you are recovering.<br />
+</li>
+<li><strong>View key:</strong> Your private view key (needed to be able to check your funds).<br />
+</li>
+<li><strong>Spend key:</strong> Your private spend key (needed to spend your funds).<br />
+</li>
+<li><strong>Creation Date or Restore height (optional):</strong> If you know the date or block height that your wallet was created at, you can specify it here so the wallet doesn't have to scan the entire blockchain looking for your funds. For example, if your first transaction was included on <code>2018-07-08</code> in block <code>1350000</code>, you should put the previous day date (e.g. <code>2018-07-06</code>) or a slightly lower height (e.g. <code>1330000</code>) so the wallet will start scanning from there, saving you some time. More information about restore height on <a href="https://monero.stackexchange.com/questions/7581/what-is-the-relevance-of-the-restore-height">StackExchange</a>.<br />
+</li>
+<li><strong>Wallet location:</strong> Select the destination folder of the wallet.</li>
+</ol>
+<p>When everything is ready click the right arrow and then the <code>Use ArQmA</code> button.<br />
+A detailed guide is available on getArQmA.org: <a href="https://github.com/arqma/arqma.github.io">'Restoring wallet from keys'</a></p>
+<h2 id="open-a-wallet-from-file">Open a wallet from file</h2>
+<p>After clicking this option a window will pop up. Navigate to your file with the extension <code>.keys</code>, select it and click the right arrow.</p>
+<h1 id="arqma-account">ArQmA Account</h1>
+<p><img src="media/black_account.png" alt="account" /></p>
+<p>The <code>Account</code> tab provides tool to handle your different ArQmA accounts within your wallet.</p>
+<ol type="1">
+<li><strong>Balance All:</strong> Let you see the sum of all your accounts balances, unlocked or not.<br />
+</li>
+<li><strong>Accounts:</strong> This is the list of accounts already generated on your wallet.<br />
+</li>
+<li><strong>Create new account:</strong> Click on this button to create a new account and set its <em>optional</em> label.</li>
+</ol>
+<p>You can change the current account by simply clicking on it on the list.<br />
+Each of your accounts are filled with their own informations:</p>
+<ol start="4" type="1">
+<li><strong>Label:</strong> A name or description of the account for convenience.<br />
+</li>
+<li><strong>Address:</strong> The account primary address. <em>Note: Primary account addresses and secondary account addresses have different heading numbers</em><br />
+</li>
+<li><strong>Balance:</strong> The account total balance. It cumulates the main address and all subaddresses for this account. <em>Note: Subaddresses are managend through the <a href="#send-ArQmA">Send</a> screen</em><br />
+</li>
+<li><strong>Set Label:</strong> Click on this button to set this account label.<br />
+</li>
+<li><strong>Copy Address:</strong> Click on this button to copy this account address to the clipboard</li>
+</ol>
+<h1 id="send-arqma">Send ArQmA</h1>
+<p><img src="media/black_send.png" alt="send" /></p>
+<p>The <code>Send</code> tab provides tools for creating outgoing transactions.</p>
+<ol type="1">
+<li><strong>Amount:</strong> This is how much ArQmA you want to send.<br />
+</li>
+<li><strong>Transaction priority:</strong> This is the priority level your transaction will receive in the pool of transactions waiting to be confirmed. The more you pay, the higher your transactions priority for inclusion in a block.<br />
+<em>Currently staying with the default or the slow option is likely to get you into the next block.</em><br />
+</li>
+<li><strong>Address:</strong> This is where you put the ArQmA address that you are sending to. Best practice is to copy and paste the address to prevent errors, accompanied with visually checking that the pasted address is correct.<br />
+</li>
+<li><strong>Payment ID (optional):</strong> The payment ID is an identifier attached to the transaction you are about to send. Often when sending to an exchange they will give you a payment ID that you must include here. This is so they know which incoming transaction is from you.<br />
+<em>If you forget to add your payment ID you should still be able to recover your funds by contacting the party you sent ArQmA to.</em><br />
+<em>Long payment IDs are being deprecated. It is hidden by default. If you need to specify a long payment ID, you should enable it first on the <a href="#layout">Settings &gt; Layout</a> tab. You should encourage services to accept payments that need to be identified with unique subaddresses instead</em><br />
+</li>
+<li><strong>Description (optional):</strong> This is for your record keeping. You can add some information regarding your transaction for future reference.<br />
+</li>
+<li><strong>Sweep unmixable:</strong> This allows you to get rid of outputs in your wallet which have strange amounts like <code>0.000006839355</code>. These are unmovable without combining them with another output.<br />
+<em>Most users will never need to use this feature.</em><br />
+</li>
+<li><strong>Sign tx file:</strong> This button allows you to sign a transaction file that was created on a view-only wallet.<br />
+</li>
+<li><strong>Export key images:</strong> This option will allow you to export your key images. They are needed to get the true balance of a view-only wallet.</li>
+</ol>
+<h2 id="address-book">Address Book</h2>
+<p>The <code>Address Book</code> tab lets you save addresses that you frequently transact with. This is a convenient place to copy addresses from when creating transactions.</p>
+<h1 id="receive-arqma">Receive ArQmA</h1>
+<p><img src="media/black_receive.png" alt="receive" /></p>
+<p>The <code>Receive</code> tab provides tools for generating subaddresses.</p>
+<ol type="1">
+<li><strong>Addresses:</strong> This is a list of your primary address and subaddresses.<br />
+</li>
+<li><strong>Create new address:</strong> This button allows you to create new subaddresses. You can create as many as you would like. <em>Learn more about <a href="https://monero.stackexchange.com/questions/3673/what-is-a-sub-address">subaddresses</a>.</em><br />
+</li>
+<li><strong>Set Label:</strong> Click on this button to set this subaddress label.<br />
+</li>
+<li><strong>QR code:</strong> This is a QR code that has your selected address embedded into it. It can be used as a way to give others your ArQmA address by scanning the code.<br />
+</li>
+<li><strong>Save:</strong> Click here to save the QR code as a <code>png</code> image.<br />
+</li>
+<li><strong>Copy:</strong> Click here to copy the QR code corresponding URL formated as *ArQmA:
+<address>
+<ul>
+<li></li>
+</ul></li>
+</ol>
+<h2 id="merchant-view">Merchant view</h2>
+<p><img src="media/merchant.png" alt="merchant" /></p>
+<p>The <code>Merchant</code> view is intending to offer professionals a nice app on their points of sell. It let you craft payment requests, and monitor incoming transactions</p>
+<ol type="1">
+<li><strong>QR code:</strong> This is a QR code that has your selected address, and optionally the amount, embedded into it. It can be used as a way to give others your ArQmA address by scanning the code.<br />
+</li>
+<li><strong>Amount:</strong> This is for creating a payment request, enter the amount of ArQmA you would like to receive.<br />
+</li>
+<li><strong>Payment URL:</strong> This is the URL corresponding to the address and amount you have chosen. It could be copied by clicking on it and sent to a customer.<br />
+</li>
+<li><strong>Tracking:</strong> If you tick this box, you'll see a list of incoming transactions.<br />
+</li>
+<li><strong>Incoming transaction:</strong> Those are the transaction currently seen on the blockchain and the transaction pool, with associated confirmations.</li>
+</ol>
+<h1 id="transaction-history">Transaction History</h1>
+<p><img src="media/black_history.png" alt="history" /></p>
+<p>The <code>History</code> tab let you walk through the transactions sent and received on your account.</p>
+<ol type="1">
+<li><strong>Export:</strong> This will create a CSV file of the record in a folder of your choice.<br />
+</li>
+<li><strong>Search:</strong> Quickly find a transaction using any field to look up from.<br />
+</li>
+<li><strong>Filters:</strong> You can choose to filter out the transaction between specific dates. This can be useful if your wallet has tons of transactions.<br />
+</li>
+<li><strong>Sort:</strong> You can sort transaction by block height or date. <em>Those methods are actually equivalent</em><br />
+</li>
+<li><strong>Transaction list:</strong> Here are displayed your transactions on this account. Each transaction is displayed with it's informations: <code>Amount</code>, <code>Tx ID</code>, <code>Height</code>, <code>Date</code>, <code>Fee</code> (for outgoing transactions), and <code>Description</code> <em>Optional</em>.<br />
+</li>
+<li><strong>Set description:</strong> You can optionally click here to set a description of your choice to this transaction.<br />
+</li>
+<li><strong>Prove transaction:</strong> Clicking here will generate a payment proof in case of a dispute. More details on proving payments can be found <a href="https://getmonero.org/resources/user-guides/prove-payment.html">here</a> <em>For outgoing transaction only</em><br />
+</li>
+<li><strong>Details:</strong> Clicking here will show you the transaction details: <code>Tx ID</code>, <code>Address Label</code>, <code>Address</code>, and <code>Payment ID</code>.</li>
+</ol>
+<h1 id="advanced-features">Advanced Features</h1>
+<h2 id="solo-mining">Solo mining</h2>
+<p><img src="media/black_mining.png" alt="mining" /></p>
+<p>The Mining tab provides a one click CPU miner that is embedded into the GUI.</p>
+<ol type="1">
+<li><strong>CPU threads:</strong> Number of CPU threads to use for mining.<br />
+</li>
+<li><strong>threads auto-configuration:</strong> Set automatically the number of threads either to the recommended number, or to the max number.<br />
+</li>
+<li><strong>Background mining:</strong> Check this box to enable experimental background mining. This should allow you to use your computer normally while mining.<br />
+</li>
+<li><strong>Start mining:</strong> Start the miner.<br />
+</li>
+<li><strong>Stop mining:</strong> Stop the miner.<br />
+</li>
+<li><strong>Status:</strong> Indicates the mining state and hashrate.</li>
+</ol>
+<h2 id="prove---check">Prove - Check</h2>
+<p>The <code>Prove/check</code> tab provides tools for proving a payment or validating proof of a payment. This is necessary with ArQmA because these details are not available on the blockchain.</p>
+<h3 id="prove-transaction">Prove Transaction</h3>
+<p><img src="media/black_prove.png" alt="Prove payment" /></p>
+<p>This will generate a proof that you made a payment to a certain address. You need to put the following information:</p>
+<ol type="1">
+<li><strong>Transaction ID:</strong> This is the ID of the payment you are creating proof for. You can find the transaction details by selecting the History tab from the left menu.<br />
+</li>
+<li><strong>Address:</strong> This is the address you are proving payment to.<br />
+</li>
+<li><strong>Message (optional):</strong> This an optional message that will be signed with the transaction details. If you choose to include a message then the other party must also include the exact same message in order to verify your proof.<br />
+</li>
+<li><strong>Generate:</strong> Click here once you've entered all the details to generate your proof.  </li>
+</ol>
+<p>A detailed guide is available using ArQmA at getmonero.org: <a href="https://getmonero.org/resources/user-guides/prove-payment.html">'How to prove payment'</a></p>
+<h3 id="check-transaction">Check Transaction</h3>
+<p><img src="media/black_check.png" alt="Check payment" /></p>
+<p>This will verify that a payment was made. You need to put the following information:</p>
+<ol type="1">
+<li><strong>Transaction ID:</strong> This is the ID of the payment you are attempting to verify.<br />
+</li>
+<li><strong>Address:</strong> This is the receiving address of the payment you are attempting to verify.<br />
+</li>
+<li><strong>Message (optional):</strong> This is the optional message that may have been included with the proof.<br />
+</li>
+<li><strong>Signature:</strong> This is the signature generated to prove payment.<br />
+</li>
+<li><strong>Check:</strong> Click here once you've entered all the details to check that the transaction proof is valid.</li>
+</ol>
+<h2 id="shared-ringdb">Shared RingDB</h2>
+<p><img src="media/black_sharedringdb.png" alt="shared ringdb 1/2" /></p>
+<p>This is an advanced tool that can be used to improve the privacy of ring signatures. The outputs used in ring signatures can be adapted to mitigate the privacy loss when using a key-reusing fork or to avoid outputs that could not be spent in this transaction.</p>
+<ol type="1">
+<li><strong>Mark as spent filename:</strong> This tool will mark outputs that are known to be spent. After running arqma-blockchain-mark-spent-outputs, import the resulting file to avoid using these outputs as decoys in constructed ring signatures. This file is stored in the .shared-ringdb folder by default.<br />
+</li>
+<li><strong>Mark as spent output:</strong> This will mark or unmark as spent a chosen single output. Outputs are represented by 64-character strings. The outputs added in this field will not be used as decoys in constructed ring signatures. Unmarked outputs may (but will not necessarily) by used as decoys.</li>
+</ol>
+<p><img src="media/black_sharedringdb_2.png" alt="shared ringdb 2/2" /></p>
+<ol start="3" type="1">
+<li><strong>Key image input:</strong> Add the key image that was used on the key-reusing fork.<br />
+</li>
+<li><strong>Get ring:</strong> Press the &quot;Get Ring&quot; button to get the ring members for the given key image in 3.<br />
+</li>
+<li><strong>Set ring:</strong> Press the &quot;Set Ring&quot; button to set the ring members for a transaction. Copy the ring members from 4 to get those for the key image, or manually type in your own.<br />
+</li>
+<li><strong>Intent to spend:</strong> Select this if you are certain that you will spend ArQmA on a key-reusing fork. This will aggressively modify the input selection algorithm to give you the greatest plausible deniability.<br />
+</li>
+<li><strong>Possibility to spend:</strong> Select this if you may spend ArQmA on a key-reusing fork. This will modify the input selection algorithm. Uncheck this only if you are certain you will not use a key-reusing fork.<br />
+</li>
+<li><strong>Relative:</strong> When selected, the offsets are encoded relative to the previous, as opposed to absolute (transactions use relative offsets).<br />
+</li>
+<li><strong>Segregation height:</strong> The block height at which the key-reusing fork splits.</li>
+</ol>
+<h2 id="sign---verify-message">Sign - verify Message</h2>
+<p><img src="media/black_sign-verify.png" alt="sign/verify" /></p>
+<p>The <code>Sign/verify</code> tab provides tools for signing a message or file with your private key or verifying the authenticity of a singed message or file.</p>
+<h3 id="sign">Sign</h3>
+<ol type="1">
+<li><strong>Message:</strong> This is where you can enter a message to be signed.<br />
+</li>
+<li><strong>Signature:</strong> This is where your unique signature will appear once you click the Sign button. This is linked to your private key and the message you entered. It will be given as proof along with the message which was signed.</li>
+</ol>
+<h3 id="verify">Verify</h3>
+<ol start="3" type="1">
+<li><strong>Verify message:</strong> This is where you will put a message that has been signed.<br />
+</li>
+<li><strong>Address:</strong> This is where you will enter the public ArQmA address of the signer.<br />
+</li>
+<li><strong>Signature:</strong> This is where you will enter the signature you are verifying. Once all the required information has been entered click the Verify button. A pop-up will tell you if the signature is valid.</li>
+</ol>
+<h2 id="sign---verify-file">Sign - verify File</h2>
+<p><img src="media/black_sign-verify-file.png" alt="sign/verify" /></p>
+<p>The <code>Sign/verify</code> tab provides tools for signing a message or file with your private key or verifying the authenticity of a singed message or file.</p>
+<h3 id="sign-1">Sign</h3>
+<ol type="1">
+<li><strong>File:</strong> This is where you can choose a file to be signed. Click Browse to navigate the file system.<br />
+</li>
+<li><strong>Signature:</strong> This is where your unique signature will appear once you click the Sign button. This is linked to your private key and the file you entered. It will be given as proof along with the file which was signed.</li>
+</ol>
+<h3 id="verify-1">Verify</h3>
+<ol start="3" type="1">
+<li><strong>File:</strong> This is where you enter the path to a file that has been signed. Click Browse to navigate the file system.<br />
+</li>
+<li><strong>Address:</strong> This is where you will enter the public ArQmA address of the signer.<br />
+</li>
+<li><strong>Signature:</strong> This is where you will enter the signature you are verifying. Once all the required information has been entered click the Verify button. A pop-up will tell you if the signature is valid.</li>
+</ol>
+<h1 id="settings">Settings</h1>
+<p>The <code>Settings</code> tab provides tools for customizing configuration options.</p>
+<h3 id="wallet">Wallet</h3>
+<p><img src="media/black_settings-wallet.png" alt="settings-wallet" /></p>
+<ol type="1">
+<li><strong>Close this wallet:</strong> Click here to safely close the current wallet<br />
+</li>
+<li><strong>Create a view-only wallet:</strong> Click here to generate a view-only (or audit) wallet, which is capable to see existing outgoing transactions and all incoming transactions. See this <a href="https://getmonero.org/resources/user-guides/view_only.html">user-guide</a> for more information.<br />
+</li>
+<li><strong>Show seed &amp; keys:</strong> This button will redirect you to the <a href="#seed-and-keys">Seed and keys</a> tab.<br />
+</li>
+<li><strong>Rescan wallet balance:</strong> Click here to rescan the blockchain for all the transaction. <em>Note: You will lose any information not stored on the blockchain (this includes destination addresses, tx secret keys, tx notes, etc.)</em><br />
+</li>
+<li><strong>Change wallet password:</strong> Click here to change your password.</li>
+</ol>
+<h3 id="layout">Layout</h3>
+<p><img src="media/black_settings-layout.png" alt="settings_layout" /></p>
+<p>The <code>layout</code> tab is where you can adjust the settings of the GUI wallet. The most important options are: (0) Custom decorations. Unchecking this box will change the background texture and simple font display for faster a display screen. The screen will likely blink off, then back on with the new settings. (1) <strong>Hide balance:</strong> If you are running your wallet in public, you may want to hide its balance. This can be useful for point of sales systems.<br />
+(2) <strong>Enable Payment ID:</strong> Long payment IDs are disabled by default. Click here to enable it. This can be useful for transfers to exchanges that require a long payment ID such as Binance (at the time of writing). Using long payment IDs is detrimental to your privacy. Please ask services that still use this deprecated feature to use subaddresses instead.<br />
+(3) <strong>Lock wallet:</strong> Set this to automatically lock your wallet after N minutes of inactivity. This ensures no one is able to use your wallet while you are away from keyboard.</p>
+<h3 id="local-node">Local Node</h3>
+<p><img src="media/black_settings-node-local_node.png" alt="settings_local-node" /></p>
+<ol type="1">
+<li><strong>Start/Stop Local Node:</strong> Depending on its current state, either start or stop the local node.<br />
+</li>
+<li><strong>Blockchain location:</strong> Manually enter a non-default path to the blockchain, or click <code>change</code> to choose a new path.<br />
+</li>
+<li><strong>Startup flags:</strong> When using a local node, this will be where you enter additional command line options.<br />
+</li>
+<li><strong>Bootstrap Address:</strong> Enter the hostname or IP address of the bootstrap remote node. See section <a href="#bootstrap-nodes">Bootstrap nodes</a> for a brief explanation of what a bootstrap node is.<br />
+</li>
+<li><strong>Bootstrap Port:</strong> Enter the port of the bootstrap remote node. The default trusted node is node.supportarqma.com port 19994 which will direct your GUI wallet to the nearest node on the ArQmA Network.</li>
+</ol>
+<h3 id="remote-node">Remote Node</h3>
+<p>Use a remote node, do not download the blockchain. Check the <a href="#about-remote-nodes">'About remote nodes' section</a> of this guide.</p>
+<p><img src="media/black_settings-node-remote_node.png" alt="settings_remote-node" /></p>
+<ol type="1">
+<li><strong>Address:</strong> Enter the hostname or IP address of the remote node.<br />
+</li>
+<li><strong>Port:</strong> Enter the port of the remote node.<br />
+</li>
+<li><strong>Daemon Username:</strong> enter a username in case authentication to the remote node is required.<br />
+</li>
+<li><strong>Daemon Password:</strong> enter a password in case authentication to the remote node is required.<br />
+</li>
+<li><strong>Trusted Daemon:</strong> By default, data requests to remote nodes are obfuscated, and this process requires more resources. If your remote node is under your control (i.e. a dedicated server of your own) you can mark it trusted so that data requests will not be obfuscated anymore (just like a local node).</li>
+</ol>
+<h3 id="log">Log</h3>
+<p><img src="media/black_settings-log.png" alt="settings-log" /></p>
+<ol type="1">
+<li><strong>Log level:</strong> Change the verbosity of the debug logs.<br />
+</li>
+<li><strong>Log categories:</strong> Add specific categories to the debug logs.<br />
+</li>
+<li><strong>Daemon log:</strong> Real time output of the log.<br />
+</li>
+<li><strong>Command line:</strong> Interact with the daemon.</li>
+</ol>
+<h3 id="info">Info</h3>
+<p><img src="media/black_settings-info.png" alt="settings-info" /></p>
+<ol type="1">
+<li><strong>GUI Version:</strong> Version of the GUI wallet installed.<br />
+</li>
+<li><strong>Embedded ArQmA Version:</strong> Version of the embedded daemon in use.<br />
+</li>
+<li><strong>Wallet path:</strong> Where the wallet is located on your computer.<br />
+</li>
+<li><strong>Wallet creation height:</strong> Change the block height that a wallet rescan will go back to.<br />
+</li>
+<li><strong>Wallet log path:</strong> Where the logs for this wallet will be saved.<br />
+</li>
+<li><strong>Wallet mode:</strong> Display the wallet mode chosen in the <a href="#choose-wallet-mode">wizard</a>.<br />
+</li>
+<li><strong>Copy to clipboard:</strong> Copy all information to clipboard.</li>
+</ol>
+<h2 id="seed-and-keys">Seed and keys</h2>
+<p><img src="media/black_seed-keys.png" alt="seed-keys" /></p>
+<p>The <code>Seeds &amp; Keys</code> tab displays your wallets mnemonic seed as well as your secret view key, public view key, secret spend key, and public spend key.</p>
+<ol type="1">
+<li><strong>Mnemonic seed: DO NOT share your mnemonic seed with anyone. Store a copy securely.</strong> The mnemonic seed is a 25 word phrase that contains all the information needed to view and spend funds. There is no recovery process possible if you lose both your mnemonic seed phrase and your keys. <em>Learn more about ArQmA <a href="https://getmonero.org/resources/moneropedia/mnemonicseed.html">mnemonic seeds</a>.</em><br />
+</li>
+<li><strong>Secret view key:</strong> Secret view keys allows the holder to view your wallets incoming transactions, but not outgoing. It is sometimes useful for auditing purposes to give your secret view key to a third party.<br />
+</li>
+<li><strong>Public view key:</strong> The public view key is used for stealth address creation. <em>Learn more about <a href="https://getmonero.org/resources/moneropedia/viewkey.html">view keys</a>.</em><br />
+</li>
+<li><strong>Secret spend key: DO NOT share your secret spend key with anyone. The secret spend key is used to sign transactions and should be regarded with the same security as your mnemonic seed.</strong><br />
+</li>
+<li><strong>Public spend key:</strong> The public spend key is used by the network to verify the signature of the key image you generate when you make a transaction. This is what prevents double-spends as the network enforces the rule that a key image can be spent only once. <em>Learn more about ArQmA <a href="https://getmonero.org/resources/moneropedia/spendkey.html">spend keys</a>.</em></li>
+</ol>
+<p><img src="media/black_seed-keys_2.png" alt="seed-keys" /></p>
+<ol start="6" type="1">
+<li><strong>Export Spendable Wallet: DO NOT share your spendable wallet QR code with anyone. This can be used like a mnemonic seed for recovering your wallet.</strong> This creates a qrcode that contains all of your keys.<br />
+</li>
+<li><strong>Export View Only Wallet:</strong> This creates a QR code that contains only the keys for viewing the transactions that this wallet sends or receives, but cannot create transactions.</li>
+</ol>
+<h1 id="binaries-verification">Binaries Verification</h1>
+<p>Verify that the files you downloaded match the official ones. You can use <a href="https://getmonero.org/resources/user-guides/verification-windows-beginner.html">this step-by-step guide</a> with pictures (easy, for Windows user). Just use the ArQma signing key instead of fluffypony's key to verify the checksum/signing of ArQmA releases here: (https://github.com/arqma/arqma-gui/releases) You can see the SHA-256 keys each release per Operating System.</p>
+<h1 id="about-remote-nodes">About remote nodes</h1>
+<p>Remote nodes are useful if you are not able/don't want to download the whole blockchain, but be advised that malicious remote nodes could compromise some privacy. They may track your IP address, track your &quot;restore height&quot; and associated block request data, and send you inaccurate information to learn more about transactions you make. Please make sure to use a node you trust (hopefully your own) and remain aware of these limitations. Users who prioritize privacy should use a full node instead. A number of trusted ArQmA open nodes are at node.supportarqma.com:19994 . Which is maintained by several auto global rollover IPs closest to your locality.</p>
+<h2 id="bootstrap-nodes">Bootstrap nodes</h2>
+<p>A bootstrap node is a remote node to use whilst also syncing the blockchain. This is different than the remote node setting, since it will only use the specified remote node until the blockchain is fully synced locally. It is a reasonable tradeoff for most people who care about privacy but also want the convenience of an automatic fallback option. Be aware that when using remote nodes (including with the bootstrap setting), nodes may track your IP address, track your &quot;restore height&quot; and associated block request data, and send you inaccurate information to learn more about transactions you make. Please make sure to use a node you trust (hopefully your own) and remain aware of these limitations. Keep the ArQmA full node software operating on your computer even when you are not using the wallet to reduce the amount of leaked data. Use the ArQmA trusted node at node.supportarqma.com:19994 .</p>
+<h1 id="common-issues-and-solutions">Common issues and solutions</h1>
+<ul>
+<li><strong><a href="https://monero.stackexchange.com/questions/6640/i-am-missing-not-seeing-a-transaction-to-in-the-gui-zero-balance">I am missing (not seeing) a transaction to (in) the GUI (zero balance)</a></strong> Your coins are always stored on the blockchain regardless of the device used to access them. There are also several workarounds for this:</li>
+</ul>
+<ol type="1">
+<li>You can always use the [ArQmA web wallet] : (https://myarqma.com) to view your balance, conduct transactions. Or, You can use the CLI wallet for your Operating System. Or, You can use the Android/iPhone ArQmA wallet from the GooglePlay App store.</li>
+<li>Your blockchain local node copy is probably corrupted somehow. Remove it and redownload it. It's usually stored at C:directory or where you specified it. You can delete it and resync to the ArQmA Network. Or, alternatively for a quick, but possibly less privacy secure transaction, you can use a trusted remote-node like node.support.arqma.com:19994. See Node settings under &quot;Settings&quot;, then &quot;node&quot; and fill in the remote node settings.</li>
+<li>Remove and reinstall the GUI wallet application. You can also update the wallet application to the latest version overwriting the same directory that it was installed in with Windows.</li>
+</ol>
+<ul>
+<li><p><strong><a href="https://monero.stackexchange.com/questions/6825/i-am-using-the-gui-and-my-daemon-doesnt-start-anymore">I am using the GUI and my daemon doesn't start anymore</a></strong></p></li>
+<li><p><strong><a href="https://monero.stackexchange.com/questions/6649/transaction-stuck-as-pending-in-the-gui">Transaction stuck as “pending” in the GUI</a></strong></p></li>
+<li><strong><a href="https://monero.stackexchange.com/questions/6651/my-gui-feels-buggy-freezes-all-the-time">My GUI feels buggy / freezes all the time</a></strong> Tip: Turn off mining on the wallet while using it if you have it enabled. Or free up a core for applications while using your external mining applicatin. You can temporarily disable mining by going to the &quot;Advanced&quot; option on the left and select &quot;Mining&quot; here: <img src="media/ensure_not_mining.png" alt="mode" /></li>
+<li><strong><a href="https://monero.stackexchange.com/questions/6823/my-name-contains-a-special-non-ascii-character-e-g-%c3%a9-%c3%b8-%c3%a2-%c3%96-and-i-cant-c">My name contains a special (non-ASCII) character (e.g. é, ø, â, Ö) and I can't create a wallet with the GUI</a></strong></li>
+<li><p><strong><a href="https://monero.stackexchange.com/questions/6653/the-gui-uses-all-my-bandwidth-and-i-cant-browse-anymore-or-use-another-applicat">The GUI uses all my bandwidth and I can't browse anymore or use another application that requires internet connection</a></strong> Remember, your wallet file does not have a file extension. There are actually two or more files for each &quot;wallet&quot; created. The keys file has a .keys file extension. Avoid spaces and non ASCII (only A-Z, 0-9) characters.</p></li>
+</ul>
+<p><strong><a href="https://monero.stackexchange.com/questions/7225/how-do-i-move-the-blockchain-data-mdb-to-a-different-directory-during-or-afte">How do I move the blockchain (data.mdb) to a different directory during (or after) the initial sync without losing the progress?</a></strong></p>
+<ul>
+<li><p><strong><a href="https://monero.stackexchange.com/questions/7373/how-do-i-change-the-language-of-the-25-word-mnemonic-seed-in-the-gui/">How do I change the language of the 25 word mnemonic seed in the GUI or CLI?</a></strong></p></li>
+<li><p><strong><a href="https://monero.stackexchange.com/questions/4462/my-blockchain-is-stuck-how-do-i-unstuck-it">My blockchain is stuck, how do I “unstuck” it?</a></strong></p></li>
+<li><p>**[I am using remote node, but the GUI still syncs blockchain? Connecting to the node from the GUI wallet After you enter your password for your wallet, you will see a pop up that will give you the option to &quot;use custom settings&quot;. Click on it. You will then be sent to the &quot;Settings &gt; Node&quot; page in the GUI. At this point you could choose 'Remote Node' see four text boxes labeled &quot;Address&quot;, &quot;Port&quot;, &quot;Daemon username&quot; and &quot;Daemon password&quot;. Fill the address of the node that you want to connect to which is node.supportarqma.com port 19994. This address might look like node.supportarqma.com, or it could look like any old ip address. Then fill the &quot;Port&quot; box with the node's port. The default port is 19994. Optionnaly, fill the username and password if your remote note requires them. It is recommended by the developers for safety to just us node.supportarqma.com. Your screen should look a bit like this <a href="media/remote_node_settings.png">mode</a></p></li>
+<li><p><strong>I use a high resolution display and the GUI looks extremely small</strong><br />
+This problem will be fixed soon, but there is a workaround for Windows: right click on ArQmA-wallet-gui.exe, select properties --&gt; compatibility. you'll find a 'high DPI' option, change value there from &quot;Application&quot; to &quot;System&quot; or vice versa</p></li>
+</ul>
+</body>
+</html>
