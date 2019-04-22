@@ -8,7 +8,7 @@ This document is meant to be updated continuously and **a new major release will
 The guide is composed by several different markdown files (see the chapter 'structure'). For simplicity, we have an easy-to-consult version:
 &nbsp;
 
-**[ArQmA-GUI-guide.md](arQmA-GUI-guide.md)**
+**[ArQmA-GUI-guide.md](arqmA-GUI-guide.md)**
 
 ### Versions and branches
 The links above are for the **upstream version of the guide**. In other words, they are synced with the *master* branch of the ArQmA GUI wallet.
