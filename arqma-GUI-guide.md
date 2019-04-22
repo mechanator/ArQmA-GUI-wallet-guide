@@ -213,7 +213,7 @@ On this page you can choose how to connect to the wallet and to the
 network:
 
 (1) **Create a new wallet:** Start the procedure to make a new wallet.
-    Choose this option if this is your first time using Monero.\
+    Choose this option if this is your first time using ArQmA.\
 (2) **Create new wallet from hardware:** Create a new wallet from an
     hardware device (like Ledger or Trezor)\
 (3) **Open a wallet from file:** Choose this option to select a
@@ -224,7 +224,7 @@ network:
 (5) **Change wallet mode:** Click here to switch between modes and
     choose the wallet mode that best fits your needs.\
 (6) **Mainnet:** *Advanced:* Select this from the dropdown list to use
-    the main Monero network\
+    the main ArQmA network\
 (7) **Testnet:** *Advanced:* Select this from the dropdown list if you
     would like to use a development network instead of the main network.
     Testnet is designed to let developers test new features that are not
@@ -232,7 +232,7 @@ network:
 (8) **Stagenet:** *Advanced:* Select this from the dropdown list if you
     would like to use a network for staging instead of the main network.
     Stagenet mimics the features of Mainnet and is designed to let end
-    users test Monero without the risk of losing funds.\
+    users test ArQmA without the risk of losing funds.\
 (9) **Number of KDF rounds:** *Advanced:* Adjust the number of Key
     Derivation Function rounds in order to enhance the overall security
     of the generated keys. Any random large number will increase
@@ -469,14 +469,14 @@ Send Monero
 
 The `Send` tab provides tools for creating outgoing transactions.
 
-(1) **Amount:** This is how much Monero you want to send.\
+(1) **Amount:** This is how much ArQmA you want to send.\
 (2) **Transaction priority:** This is the priority level your
     transaction will receive in the pool of transactions waiting to
     be confirmed. The more you pay, the higher your transactions
     priority for inclusion in a block.\
     *Currently staying with the default or the slow option is likely to
     get you into the next block.*\
-(3) **Address:** This is where you put the Monero address that you are
+(3) **Address:** This is where you put the ArQmA address that you are
     sending to. Best practice is to copy and paste the address to
     prevent errors, accompanied with visually checking that the pasted
     address is correct.\
@@ -485,7 +485,7 @@ The `Send` tab provides tools for creating outgoing transactions.
     exchange they will give you a payment ID that you must include here.
     This is so they know which incoming transaction is from you.\
     *If you forget to add your payment ID you should still be able to
-    recover your funds by contacting the party you sent Monero to.*\
+    recover your funds by contacting the party you sent ArQmA to.*\
     *Long payment IDs are being deprecated. It is hidden by default. If
     you need to specify a long payment ID, you should enable it first on
     the [Settings &gt; Layout](#layout) tab. You should encourage
@@ -511,7 +511,7 @@ The `Address Book` tab lets you save addresses that you frequently
 transact with. This is a convenient place to copy addresses from when
 creating transactions.
 
-Receive Monero
+Receive ArQmA
 ==============
 
 ![receive](media/black_receive.png)
@@ -526,11 +526,11 @@ The `Receive` tab provides tools for generating subaddresses.
     [subaddresses](https://monero.stackexchange.com/questions/3673/what-is-a-sub-address).*\
 (3) **Set Label:** Click on this button to set this subaddress label.\
 (4) **QR code:** This is a QR code that has your selected address
-    embedded into it. It can be used as a way to give others your Monero
+    embedded into it. It can be used as a way to give others your ArQmA
     address by scanning the code.\
 (5) **Save:** Click here to save the QR code as a `png` image.\
 (6) **Copy:** Click here to copy the QR code corresponding URL formated
-    as \*monero:
+    as \*arqma:
     <address>
     -   
 
@@ -545,9 +545,9 @@ incoming transactions
 
 (1) **QR code:** This is a QR code that has your selected address, and
     optionally the amount, embedded into it. It can be used as a way to
-    give others your Monero address by scanning the code.\
+    give others your ArQmA address by scanning the code.\
 (2) **Amount:** This is for creating a payment request, enter the amount
-    of Monero you would like to receive.\
+    of ArQmA you would like to receive.\
 (3) **Payment URL:** This is the URL corresponding to the address and
     amount you have chosen. It could be copied by clicking on it and
     sent to a customer.\
@@ -665,7 +665,7 @@ outputs that could not be spent in this transaction.
 
 (1) **Mark as spent filename:** This tool will mark outputs that are
     known to be spent. After running
-    monero-blockchain-mark-spent-outputs, import the resulting file to
+    arqma-blockchain-mark-spent-outputs, import the resulting file to
     avoid using these outputs as decoys in constructed ring signatures.
     This file is stored in the .shared-ringdb folder by default.\
 (2) **Mark as spent output:** This will mark or unmark as spent a chosen
@@ -684,10 +684,10 @@ outputs that could not be spent in this transaction.
     for a transaction. Copy the ring members from 4 to get those for the
     key image, or manually type in your own.\
 (6) **Intent to spend:** Select this if you are certain that you will
-    spend Monero on a key-reusing fork. This will aggressively modify
+    spend ArQmA on a key-reusing fork. This will aggressively modify
     the input selection algorithm to give you the greatest plausible
     deniability.\
-(7) **Possibility to spend:** Select this if you may spend Monero on a
+(7) **Possibility to spend:** Select this if you may spend ArQmA on a
     key-reusing fork. This will modify the input selection algorithm.
     Uncheck this only if you are certain you will not use a key-reusing
     fork.\
