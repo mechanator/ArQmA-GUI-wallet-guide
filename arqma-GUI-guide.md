@@ -56,7 +56,7 @@
     -   [Bootstrap nodes](#bootstrap-nodes)
 -   [Common issues and solutions](#common-issues-and-solutions)
 
-![ArQmA_logo](media/monero-logo-1280.png
+![ArQmA_logo](media/arqma-logo-1280.png
 )
 Preface
 =======
@@ -85,8 +85,8 @@ If you are on Windows:
 
 -   Make sure that your antivirus does not block the program.
 
-A miner is included in the Monero GUI software and, as a result, most
-anti virus software flags the Monero GUI files as malware and
+A miner is included in the ArQmA GUI software and, as a result, most
+anti virus software flags the ArQmA GUI files as malware and
 subsequently quarantines them. Fortunately, however, there's a fairly
 trivial work around you can use. That is:
 
@@ -322,9 +322,9 @@ Create new wallet from hardware
 (6) **Device name:** Select the hardware wallet you want to use.\
      
 
-Step by step guide on how to generate a Ledger wallet with the Monero
+Step by step guide on how to generate a Ledger wallet with the ArQmA
 GUI for all operating systems (StackExchange):\
-[How do I generate a Ledger Monero wallet with the GUI
+[How do I generate a Ledger ArQmA wallet with the GUI
 (monero-wallet-gui)?](https://monero.stackexchange.com/questions/9901/how-do-i-generate-a-ledger-monero-wallet-with-the-gui-monero-wallet-gui)
 
 ### Add a password
@@ -401,7 +401,7 @@ account'](https://getmonero.org/resources/user-guides/restore_account.html)
 
 Restoring from keys is quite easy and can be extremely useful,
 especially if you are moving your wallet from an online service like
-MyMonero. You need to put the following information:
+MyArQmA. You need to put the following information:
 
 (1) **Wallet name:** Give a name for your wallet (in this example
     `testname` is used).\
@@ -421,7 +421,7 @@ MyMonero. You need to put the following information:
     [StackExchange](https://monero.stackexchange.com/questions/7581/what-is-the-relevance-of-the-restore-height).\
 (6) **Wallet location:** Select the destination folder of the wallet.
 
-When everything is ready click the right arrow and then the `Use Monero`
+When everything is ready click the right arrow and then the `Use ArQmA`
 button.\
 A detailed guide is available on getmonero.org: ['Restoring wallet from
 keys'](https://getmonero.org/resources/user-guides/restore_from_keys.html)
@@ -432,12 +432,12 @@ Open a wallet from file
 After clicking this option a window will pop up. Navigate to your file
 with the extension `.keys`, select it and click the right arrow.
 
-Monero Account
+ArQmA Account
 ==============
 
 ![account](media/black_account.png)
 
-The `Account` tab provides tool to handle your different Monero accounts
+The `Account` tab provides tool to handle your different ArQmA accounts
 within your wallet.
 
 (1) **Balance All:** Let you see the sum of all your accounts balances,
@@ -457,12 +457,12 @@ Each of your accounts are filled with their own informations:
     numbers*\
 (6) **Balance:** The account total balance. It cumulates the main
     address and all subaddresses for this account. *Note: Subaddresses
-    are managend through the [Send](#send-monero) screen*\
+    are managend through the [Send](#send-ArQmA) screen*\
 (7) **Set Label:** Click on this button to set this account label.\
 (8) **Copy Address:** Click on this button to copy this account address
     to the clipboard
 
-Send Monero
+Send ArQmA
 ===========
 
 ![send](media/black_send.png)
@@ -612,7 +612,7 @@ Prove - Check
 -------------
 
 The `Prove/check` tab provides tools for proving a payment or validating
-proof of a payment. This is necessary with Monero because these details
+proof of a payment. This is necessary with ArQmA because these details
 are not available on the blockchain.
 
 ### Prove Transaction
@@ -718,7 +718,7 @@ file.
 
 (3) **Verify message:** This is where you will put a message that has
     been signed.\
-(4) **Address:** This is where you will enter the public Monero address
+(4) **Address:** This is where you will enter the public ArQmA address
     of the signer.\
 (5) **Signature:** This is where you will enter the signature you
     are verifying. Once all the required information has been entered
@@ -747,7 +747,7 @@ file.
 
 (3) **File:** This is where you enter the path to a file that has
     been signed. Click Browse to navigate the file system.\
-(4) **Address:** This is where you will enter the public Monero address
+(4) **Address:** This is where you will enter the public ArQmA address
     of the signer.\
 (5) **Signature:** This is where you will enter the signature you
     are verifying. Once all the required information has been entered
@@ -847,7 +847,7 @@ remote nodes' section](#about-remote-nodes) of this guide.
 ![settings-info](media/black_settings-info.png)
 
 (1) **GUI Version:** Version of the GUI wallet installed.\
-(2) **Embedded Monero Version:** Version of the embedded daemon in use.\
+(2) **Embedded ArQmA Version:** Version of the embedded daemon in use.\
 (3) **Wallet path:** Where the wallet is located on your computer.\
 (4) **Wallet creation height:** Change the block height that a wallet
     rescan will go back to.\
@@ -932,7 +932,7 @@ bootstrap setting), nodes may track your IP address, track your "restore
 height" and associated block request data, and send you inaccurate
 information to learn more about transactions you make. Please make sure
 to use a node you trust (hopefully your own) and remain aware of these
-limitations. Keep the Monero full node software operating on your
+limitations. Keep the ArQmA full node software operating on your
 computer even when you are not using the wallet to reduce the amount of
 leaked data. More information at
 https://getmonero.org/resources/moneropedia/bootstrap-node.html
