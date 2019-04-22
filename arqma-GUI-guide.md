@@ -324,7 +324,7 @@ Create new wallet from hardware
 
 Step by step guide on how to generate a Ledger wallet with the ArQmA
 GUI for all operating systems (StackExchange):\
-[How do I generate a Ledger ArQmA wallet with the GUI
+[How do I generate a Ledger Monero wallet with the GUI
 (monero-wallet-gui)?](https://monero.stackexchange.com/questions/9901/how-do-i-generate-a-ledger-monero-wallet-with-the-gui-monero-wallet-gui)
 
 ### Add a password
