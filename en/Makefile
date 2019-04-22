@@ -31,12 +31,12 @@ $(BUILD_PATH)/epub/$(BOOKNAME): | medialink
 	pandoc $(TOC) -S --epub-metadata=../$(METADATA) --epub-cover-image=../$(COVER_IMAGE) -o ../$@.epub $(CHAPTERS)
 
 $(BUILD_PATH)/html/$(BOOKNAME):  | medialink
-	mkdir -p ../$(BUILD_PATH)/html
-	ln -s ../../../media ../$(BUILD_PATH)/html/media
-	pandoc $(TOC) --standalone -fmarkdown-implicit_figures --to=html5 -o ../$@.html $(CHAPTERS)
+	sudo mkdir -p ../$(BUILD_PATH)/html
+	sudo ln -s ../../../media ../$(BUILD_PATH)/html/media
+	sudo pandoc $(TOC) --standalone -fmarkdown-implicit_figures --to=html5 -o ../$@.html $(CHAPTERS)
 
 $(BUILD_PATH)/pdf/$(BOOKNAME): | medialink
-	mkdir -p ../$(BUILD_PATH)/pdf
-	pandoc $(TOC) --latex-engine=$(LATEX_ENGINE) -V documentclass=$(LATEX_CLASS) -V geometry:$(MARGIN) -V urlcolor=$(URL_COLOR) -V lang=${LANGUAGE} -o ../$@.pdf $(CHAPTERS)
+	sudo mkdir -p ../$(BUILD_PATH)/pdf
+	sudo pandoc $(TOC) --latex-engine=$(LATEX_ENGINE) -V documentclass=$(LATEX_CLASS) -V geometry:$(MARGIN) -V urlcolor=$(URL_COLOR) -V lang=${LANGUAGE} -o ../$@.pdf $(CHAPTERS)
 
 .PHONY: all book clean epub html pdf
