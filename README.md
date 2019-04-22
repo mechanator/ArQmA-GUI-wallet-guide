@@ -1,4 +1,4 @@
-![ArQmA_logo](media/monero-logo-1280.png)
+![ArQmA_logo](media/arqma-logo-1280.png)
 ## A guide for the ArQmA GUI wallet
 
 This repository contains the guide for the [ArQmA GUI Wallet](https://github.com/arqma/arqma.github.io -TBD).
@@ -8,7 +8,7 @@ This document is meant to be updated continuously and **a new major release will
 The guide is composed by several different markdown files (see the chapter 'structure'). For simplicity, we have an easy-to-consult version:
 &nbsp;
 
-**[ArQmA-GUI-guide.md](https://github.com/arqma/arqma.github.io/ArQmA-GUI-guide/blob/master/ArQmA-GUI-guide.md)**
+**[ArQmA-GUI-guide.md](arqma-GUI-guide.md)**
 
 ### Versions and branches
 The links above are for the **upstream version of the guide**. In other words, they are synced with the *master* branch of the ArQmA GUI wallet.
@@ -26,7 +26,7 @@ For **PDF** and **EPUB** versions, check out the [latest Release](https://github
 The original guide can be found in the [en](https://github.com/arqma/arqma.github.io/ArQmA-GUI-guide/blob/master/en) folder. It's divided in 11 main chapters:
 
 **Chapter**|**Content**
----|--- 
+---|---
 00 | [Preface](https://github.com/mechanator/ArQmA-GUI-wallet-guide/blob/master/en/ch00.md)
 01 | [Welcome](https://github.com/mechanator/ArQmA-GUI-wallet-guide/blob/master/en/ch01.md)
 02 | [Create a Wallet](https://github.com/mechanator/ArQmA-GUI-wallet-guide/blob/master/en/ch02.md)
@@ -81,7 +81,7 @@ Adding a translation is very easy:
 
 ### Support
 If you need **help/support**, open an issue on this repository or contact ArqTras. You can do so:
-  
+
 + On chat Telegram or Discord. Links on the main arqma.com site.
 Discord: https://discord.gg/TqXZWGm
 
