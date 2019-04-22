@@ -131,9 +131,9 @@ Welcome
 
 ![Welcome](media/wizard_0-welcome.png)
 
-Extract the package and click on `monero-wallet-gui`.
+Extract the package and click on `ArQmA-wallet-gui`.
 
-Welcome to Monero GUI Wallet.
+Welcome to ArQmA GUI Wallet.
 
 (1) **Language:** Click here to see a list of available languages.\
 (2) **Continue:** If you are satisfied with the current language,
@@ -163,13 +163,13 @@ and privacy needs.\
 (1) **Simple mode:** This mode will connect your wallet to a
     remote node. Please note that remote nodes may weaken your privacy.
     Choose this if you have low privacy requirement, need to quickly
-    access the Monero network, and only intend to manage small amount of
-    Monero.\
+    access the ArQmA network, and only intend to manage small amount of
+    ArQmA.\
 (2) **Simple mode (bootstrap):** This mode is similar to the previous
     one, as it will connect you to a remote node, but will download the
     blockchain to your local drive in the background. As soon as you
     have a local copy of the entire blockchain, you will be connected to
-    your local node. It allows you to start using Monero immediately and
+    your local node. It allows you to start using ArQmA immediately and
     have a fallback option if your local blockchain needs to sync new
     blocks while offering the privacy benefits of a full node when fully
     synced.\
